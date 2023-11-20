@@ -8,7 +8,7 @@ import Currency from "@/components/ui/currency"
 import Button from "@/components/ui/button"
 
 import useCart from "@/hooks/use-cart";
-
+import IconButton from "./ui/icon-button";
 
 
 interface InfoProps {
@@ -52,10 +52,10 @@ const Info: React.FC<InfoProps> = ({
                 </div>
             </div>
             <div className="mt-10 flex items-center gap-x-3">
-                <Button onClick={onAddToCart} className="flex items-center gap-x-2">
-                    Add to Cart
-                    <ShoppingCart />
-                </Button>
+                <IconButton
+                    onClick={onAddToCart}
+                    icon={<ShoppingCart size={20} className="text-gray-600" />}
+                />
             </div>
         </div>
     )
